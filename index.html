@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>失智不失志 - 失智症關懷網頁</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
-        
         * {
             margin: 0;
             padding: 0;
@@ -14,483 +12,482 @@
         }
 
         body {
-            font-family: 'Kalam', 'Microsoft JhengHei', cursive;
-            background: linear-gradient(45deg, #ffeaa7, #fab1a0, #fd79a8, #fdcb6e);
-            background-size: 400% 400%;
-            animation: gradientShift 15s ease infinite;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft JhengHei', sans-serif;
+            background: #ffffff;
             min-height: 100vh;
-            color: #2d3436;
+            color: #1a1a1a;
+            line-height: 1.6;
             overflow-x: hidden;
-            position: relative;
-        }
-
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: 
-                radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.3) 0%, transparent 20%),
-                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.2) 0%, transparent 20%),
-                radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.1) 0%, transparent 20%);
-            pointer-events: none;
-            z-index: -1;
-        }
-
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 40px 20px;
         }
 
         .header {
             text-align: center;
-            margin-bottom: 30px;
-            padding: 30px 20px;
-            background: #fff;
-            border-radius: 50px 20px 50px 20px;
-            border: 4px solid #2d3436;
-            box-shadow: 
-                8px 8px 0px #fd79a8,
-                12px 12px 0px #fdcb6e;
-            transform: rotate(-1deg);
-            position: relative;
-        }
-
-        .header::before {
-            content: '💝';
-            position: absolute;
-            top: -15px;
-            right: -15px;
-            font-size: 2rem;
-            transform: rotate(15deg);
-        }
-
-        .header::after {
-            content: '🌟';
-            position: absolute;
-            bottom: -15px;
-            left: -15px;
-            font-size: 1.5rem;
-            transform: rotate(-20deg);
+            margin-bottom: 80px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #e8e8e8;
         }
 
         .header h1 {
-            font-size: 3rem;
-            color: #2d3436;
-            margin-bottom: 10px;
-            text-shadow: 3px 3px 0px #fd79a8;
-            transform: rotate(1deg);
-            font-weight: 700;
+            font-size: 3.5rem;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+            font-weight: 300;
+            letter-spacing: -0.02em;
         }
 
         .header .subtitle {
-            font-size: 1.2rem;
-            color: #636e72;
-            margin-bottom: 20px;
-            transform: rotate(-0.5deg);
+            font-size: 1.125rem;
+            color: #666666;
+            margin-bottom: 32px;
             font-weight: 400;
         }
 
         .designer-info {
-            background: #dff9fb;
-            padding: 20px;
-            border-radius: 30px 10px 30px 10px;
-            border: 3px dashed #00b894;
+            background: #f8f9fa;
+            padding: 24px;
+            border-radius: 8px;
             margin-bottom: 20px;
-            transform: rotate(0.5deg);
-            position: relative;
-        }
-
-        .designer-info::before {
-            content: '✏️';
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            font-size: 1.5rem;
+            border-left: 4px solid #007bff;
         }
 
         .designer-info h3 {
-            color: #00b894;
-            margin-bottom: 10px;
-            font-size: 1.1rem;
-            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+            font-size: 1rem;
+            font-weight: 500;
         }
 
         .designer-info a {
-            color: #0984e3;
-            text-decoration: underline;
-            text-decoration-style: wavy;
-            font-weight: 600;
-            transition: all 0.3s ease;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.2s ease;
         }
 
         .designer-info a:hover {
-            color: #fd79a8;
-            text-shadow: 2px 2px 4px rgba(253, 121, 168, 0.3);
-            transform: scale(1.05);
+            color: #0056b3;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+            margin: 80px 0;
         }
 
         .card {
-            background: #fff;
-            padding: 30px;
-            border-radius: 40px 10px 40px 10px;
-            border: 4px solid #2d3436;
-            box-shadow: 
-                6px 6px 0px #fd79a8,
-                10px 10px 0px #fdcb6e;
+            background: #ffffff;
+            padding: 32px;
+            border-radius: 12px;
+            border: 1px solid #e8e8e8;
             transition: all 0.3s ease;
             position: relative;
-            overflow: visible;
-            transform: rotate(var(--rotate, 0deg));
-        }
-
-        .card:nth-child(odd) {
-            --rotate: 1deg;
-        }
-
-        .card:nth-child(even) {
-            --rotate: -1deg;
         }
 
         .card:hover {
-            transform: translateY(-5px) rotate(0deg) scale(1.02);
-            box-shadow: 
-                8px 8px 0px #fd79a8,
-                12px 12px 0px #fdcb6e,
-                0 15px 25px rgba(0,0,0,0.1);
+            transform: translateY(-4px);
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+            border-color: #007bff;
         }
 
-        .card::before {
-            content: attr(data-emoji);
-            position: absolute;
-            top: -20px;
-            right: -20px;
+        .card-icon {
             font-size: 2.5rem;
-            transform: rotate(15deg);
-            z-index: 2;
+            margin-bottom: 24px;
+            display: block;
+            opacity: 0.8;
         }
 
         .card h3 {
-            color: #2d3436;
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-            text-align: center;
-            font-weight: 700;
-            text-shadow: 2px 2px 0px #dff9fb;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+            font-size: 1.25rem;
+            font-weight: 600;
+            line-height: 1.4;
         }
 
         .card p {
-            color: #636e72;
+            color: #666666;
+            margin-bottom: 24px;
+            font-size: 0.95rem;
             line-height: 1.6;
-            margin-bottom: 20px;
-            text-align: center;
-            font-weight: 400;
         }
 
         .card a {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             width: 100%;
-            padding: 15px 25px;
-            background: #00b894;
-            color: #fff;
+            padding: 16px 24px;
+            background: #1a1a1a;
+            color: #ffffff;
             text-decoration: none;
-            border-radius: 25px 8px 25px 8px;
-            text-align: center;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: 3px solid #2d3436;
-            box-shadow: 4px 4px 0px #fd79a8;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card a::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            transition: left 0.5s;
-        }
-
-        .card a:hover::before {
-            left: 100%;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
         }
 
         .card a:hover {
-            background: #fd79a8;
-            transform: translateY(-2px);
-            box-shadow: 6px 6px 0px #fdcb6e;
+            background: #007bff;
+            transform: translateY(-1px);
         }
 
         .book-section {
-            background: #fff;
-            padding: 40px;
-            border-radius: 60px 20px 60px 20px;
-            border: 5px solid #2d3436;
-            box-shadow: 
-                10px 10px 0px #fd79a8,
-                15px 15px 0px #fdcb6e;
+            background: #f8f9fa;
+            padding: 64px 48px;
+            border-radius: 16px;
             text-align: center;
-            margin: 40px 0;
-            transform: rotate(-1deg);
-            position: relative;
-        }
-
-        .book-section::before {
-            content: '📚';
-            position: absolute;
-            top: -25px;
-            left: -25px;
-            font-size: 3rem;
-            transform: rotate(20deg);
-        }
-
-        .book-section::after {
-            content: '💡';
-            position: absolute;
-            bottom: -25px;
-            right: -25px;
-            font-size: 2.5rem;
-            transform: rotate(-15deg);
+            margin: 80px 0;
+            border: 1px solid #e8e8e8;
         }
 
         .book-section h2 {
-            color: #2d3436;
-            margin-bottom: 20px;
+            color: #1a1a1a;
+            margin-bottom: 16px;
             font-size: 2rem;
-            font-weight: 700;
-            text-shadow: 3px 3px 0px #dff9fb;
+            font-weight: 600;
+        }
+
+        .book-title {
+            color: #666666;
+            font-size: 1.125rem;
+            margin-bottom: 32px;
+            font-weight: 400;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .book-link {
-            display: inline-block;
-            background: #fd79a8;
+            display: inline-flex;
+            align-items: center;
+            background: #007bff;
             color: white;
-            padding: 20px 40px;
-            border-radius: 30px 10px 30px 10px;
+            padding: 16px 32px;
+            border-radius: 8px;
             text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            border: 4px solid #2d3436;
-            box-shadow: 6px 6px 0px #fdcb6e;
-            margin-top: 20px;
-            position: relative;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+            gap: 8px;
         }
 
         .book-link:hover {
-            background: #00b894;
-            transform: translateY(-3px) rotate(2deg);
-            box-shadow: 8px 8px 0px #fdcb6e;
+            background: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 123, 255, 0.3);
         }
 
         .footer {
-            background: #fff;
-            padding: 30px 20px;
-            border-radius: 50px 20px 50px 20px;
-            border: 4px solid #2d3436;
-            box-shadow: 
-                8px 8px 0px #fd79a8,
-                12px 12px 0px #fdcb6e;
+            background: #f8f9fa;
+            padding: 48px 32px;
+            border-radius: 12px;
             text-align: center;
-            margin-top: 40px;
-            transform: rotate(1deg);
-            position: relative;
-        }
-
-        .footer::before {
-            content: '🤝';
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%) rotate(-10deg);
-            font-size: 2rem;
+            margin-top: 80px;
+            border: 1px solid #e8e8e8;
         }
 
         .footer p {
-            color: #2d3436;
-            margin-bottom: 15px;
-            font-size: 1.1rem;
-            font-weight: 600;
+            color: #666666;
+            margin-bottom: 24px;
+            font-size: 1rem;
         }
 
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 16px;
             flex-wrap: wrap;
-            margin-top: 20px;
         }
 
         .social-link {
-            padding: 10px 20px;
-            background: #dff9fb;
-            color: #00b894;
+            padding: 12px 24px;
+            background: #ffffff;
+            color: #1a1a1a;
             text-decoration: none;
-            border-radius: 20px 8px 20px 8px;
-            transition: all 0.3s ease;
-            border: 3px solid #00b894;
-            font-weight: 600;
-            position: relative;
+            border-radius: 8px;
+            border: 1px solid #e8e8e8;
+            transition: all 0.2s ease;
+            font-weight: 500;
         }
 
         .social-link:hover {
-            background: #00b894;
-            color: #fff;
-            transform: translateY(-2px) rotate(3deg);
-            box-shadow: 4px 4px 0px #fd79a8;
+            background: #007bff;
+            color: #ffffff;
+            border-color: #007bff;
+            transform: translateY(-1px);
         }
 
-        .floating-elements {
+        /* 模態視窗樣式 */
+        .modal {
+            display: none;
             position: fixed;
-            top: 0;
+            z-index: 1000;
             left: 0;
+            top: 0;
             width: 100%;
             height: 100%;
-            pointer-events: none;
-            z-index: -1;
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
         }
 
-        .floating-element {
+        .modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: modalFadeIn 0.2s ease;
+        }
+
+        .modal-content {
+            background: #ffffff;
+            margin: 20px;
+            padding: 48px;
+            border-radius: 16px;
+            width: 90%;
+            max-width: 700px;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 24px 48px rgba(0, 0, 0, 0.2);
+            animation: modalSlideIn 0.3s ease;
+        }
+
+        .close-btn {
             position: absolute;
-            font-size: 2rem;
-            animation: float 8s ease-in-out infinite;
-            opacity: 0.7;
+            top: 16px;
+            right: 16px;
+            background: #f8f9fa;
+            border: 1px solid #e8e8e8;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            color: #666666;
         }
 
-        @keyframes float {
-            0%, 100% { 
-                transform: translateY(0px) rotate(0deg); 
-                opacity: 0.7;
-            }
-            25% { 
-                transform: translateY(-30px) rotate(90deg); 
-                opacity: 1;
-            }
-            50% { 
-                transform: translateY(-15px) rotate(180deg); 
-                opacity: 0.5;
-            }
-            75% { 
-                transform: translateY(-25px) rotate(270deg); 
-                opacity: 0.8;
-            }
+        .close-btn:hover {
+            background: #1a1a1a;
+            color: #ffffff;
+            border-color: #1a1a1a;
         }
 
-        .floating-element:nth-child(1) { 
-            top: 10%; 
-            left: 10%; 
-            animation-delay: 0s; 
-        }
-        .floating-element:nth-child(2) { 
-            top: 20%; 
-            left: 80%; 
-            animation-delay: 2s; 
-        }
-        .floating-element:nth-child(3) { 
-            top: 80%; 
-            left: 20%; 
-            animation-delay: 4s; 
-        }
-        .floating-element:nth-child(4) { 
-            top: 70%; 
-            left: 70%; 
-            animation-delay: 1s; 
-        }
-        .floating-element:nth-child(5) { 
-            top: 40%; 
-            left: 90%; 
-            animation-delay: 3s; 
+        .modal-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #e8e8e8;
         }
 
-        .doodle {
-            position: absolute;
-            opacity: 0.3;
-            font-size: 1.5rem;
-            animation: doodleFloat 10s linear infinite;
+        .modal-title {
+            font-size: 1.75rem;
+            color: #1a1a1a;
+            font-weight: 600;
+            margin-bottom: 8px;
         }
 
-        @keyframes doodleFloat {
+        .modal-subtitle {
+            color: #666666;
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .content-preview {
+            background: #f8f9fa;
+            padding: 32px;
+            border-radius: 12px;
+            border: 1px solid #e8e8e8;
+        }
+
+        .content-preview h3 {
+            color: #1a1a1a;
+            margin-bottom: 16px;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .content-preview p {
+            color: #666666;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .primary-btn, .secondary-btn {
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .primary-btn {
+            background: #007bff;
+            color: white;
+        }
+
+        .primary-btn:hover {
+            background: #0056b3;
+            transform: translateY(-1px);
+        }
+
+        .secondary-btn {
+            background: #f8f9fa;
+            color: #1a1a1a;
+            border: 1px solid #e8e8e8;
+        }
+
+        .secondary-btn:hover {
+            background: #e9ecef;
+            border-color: #adb5bd;
+        }
+
+        .tips-section {
+            background: #ffffff;
+            padding: 24px;
+            border-radius: 8px;
+            border: 1px solid #e8e8e8;
+            border-left: 4px solid #007bff;
+        }
+
+        .tips-section h4 {
+            color: #1a1a1a;
+            margin-bottom: 16px;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .tips-section ul {
+            color: #666666;
+            padding-left: 20px;
+        }
+
+        .tips-section li {
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        @keyframes modalFadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes modalSlideIn {
             from {
-                transform: translateX(-100px) rotate(0deg);
+                transform: scale(0.9);
+                opacity: 0;
             }
             to {
-                transform: translateX(calc(100vw + 100px)) rotate(360deg);
+                transform: scale(1);
+                opacity: 1;
             }
         }
 
         @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2rem;
+            .container {
+                padding: 24px 16px;
             }
-            
+
+            .header {
+                margin-bottom: 48px;
+            }
+
+            .header h1 {
+                font-size: 2.5rem;
+            }
+
             .grid {
                 grid-template-columns: 1fr;
-                gap: 20px;
+                gap: 24px;
+                margin: 48px 0;
             }
-            
+
             .card {
-                padding: 20px;
+                padding: 24px;
             }
-            
+
             .book-section {
-                padding: 30px 20px;
+                padding: 40px 24px;
+                margin: 48px 0;
+            }
+
+            .modal-content {
+                margin: 16px;
+                padding: 32px 24px;
+                width: calc(100% - 32px);
+            }
+
+            .action-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .primary-btn, .secondary-btn {
+                justify-content: center;
+            }
+
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .social-link {
+                width: 200px;
+                text-align: center;
             }
         }
 
-        /* 手繪線條效果 */
-        .wavy-line {
-            position: relative;
+        /* 滾動條美化 */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
 
-        .wavy-line::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: repeating-linear-gradient(
-                to right,
-                #fd79a8 0px,
-                #fd79a8 5px,
-                transparent 5px,
-                transparent 10px
-            );
+        ::-webkit-scrollbar-track {
+            background: #f8f9fa;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #dee2e6;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #adb5bd;
         }
     </style>
 </head>
 <body>
-    <div class="floating-elements">
-        <div class="floating-element">🧠</div>
-        <div class="floating-element">💕</div>
-        <div class="floating-element">🌈</div>
-        <div class="floating-element">⭐</div>
-        <div class="floating-element">🎨</div>
-    </div>
-
     <div class="container">
         <div class="header">
-            <h1 class="wavy-line">失智不失志</h1>
+            <h1>失智不失志</h1>
             <p class="subtitle">關愛失智，守護記憶，讓愛延續</p>
             <div class="designer-info">
                 <h3>簡報設計者：鍾孟修 職能治療師</h3>
@@ -502,83 +499,92 @@
         </div>
 
         <div class="grid">
-            <div class="card" data-emoji="📹">
+            <div class="card">
+                <span class="card-icon">📹</span>
                 <h3>失智症影片觀賞</h3>
                 <p>透過影片深入了解失智症的基本概念與重要性</p>
-                <a href="https://mattsue.my.canva.site/dagtpvim-xq" target="_blank">點選觀看影片</a>
+                <a href="#" onclick="openModal('失智症影片觀賞', '透過影片深入了解失智症的基本概念與重要性', 'https://mattsue.my.canva.site/dagtpvim-xq')" class="modal-link">觀看內容</a>
             </div>
 
-            <div class="card" data-emoji="📈">
+            <div class="card">
+                <span class="card-icon">📈</span>
                 <h3>失智症之趨勢</h3>
                 <p>了解失智症的發展趨勢與未來展望</p>
-                <a href="https://mattsue.my.canva.site/dagtpjxfp-yi" target="_blank">探索趨勢分析</a>
+                <a href="#" onclick="openModal('失智症之趨勢', '了解失智症的發展趨勢與未來展望', 'https://mattsue.my.canva.site/dagtpjxfp-yi')" class="modal-link">瀏覽趨勢</a>
             </div>
 
-            <div class="card" data-emoji="🧠">
+            <div class="card">
+                <span class="card-icon">🧠</span>
                 <h3>失智症的症狀</h3>
                 <p>認識失智症的各種症狀表現</p>
-                <a href="https://mattsue.my.canva.site/dagtpovipje" target="_blank">了解症狀表現</a>
+                <a href="#" onclick="openModal('失智症的症狀', '認識失智症的各種症狀表現', 'https://mattsue.my.canva.site/dagtpovipje')" class="modal-link">了解症狀</a>
             </div>
 
-            <div class="card" data-emoji="🔍">
+            <div class="card">
+                <span class="card-icon">🔍</span>
                 <h3>失智症與老化和其他疾病之差異</h3>
                 <p>學習如何區分失智症與正常老化的差異</p>
-                <a href="https://mattsue.my.canva.site/dagtprfpkyg" target="_blank">了解差異分析</a>
+                <a href="#" onclick="openModal('失智症與老化和其他疾病之差異', '學習如何區分失智症與正常老化的差異', 'https://mattsue.my.canva.site/dagtprfpkyg')" class="modal-link">了解差異</a>
             </div>
 
-            <div class="card" data-emoji="📊">
+            <div class="card">
+                <span class="card-icon">📊</span>
                 <h3>失智症的分類</h3>
                 <p>深入了解失智症的不同類型與特徵</p>
-                <a href="https://mattsue.my.canva.site/dagtpmedvdy" target="_blank">探索分類系統</a>
+                <a href="#" onclick="openModal('失智症的分類', '深入了解失智症的不同類型與特徵', 'https://mattsue.my.canva.site/dagtpmedvdy')" class="modal-link">探索分類</a>
             </div>
 
-            <div class="card" data-emoji="⚠️">
+            <div class="card">
+                <span class="card-icon">⚠️</span>
                 <h3>失智症的前期</h3>
                 <p>認識失智症前期的重要指標</p>
-                <a href="https://mattsue.my.canva.site/dagtpjr0uoy" target="_blank">了解前期症狀</a>
+                <a href="#" onclick="openModal('失智症的前期', '認識失智症前期的重要指標', 'https://mattsue.my.canva.site/dagtpjr0uoy')" class="modal-link">了解前期</a>
             </div>
 
-            <div class="card" data-emoji="🚨">
+            <div class="card">
+                <span class="card-icon">🚨</span>
                 <h3>失智症的十大警訊</h3>
                 <p>掌握失智症的十大關鍵警訊</p>
-                <a href="https://mattsue.my.canva.site/dagtpml86jg" target="_blank">檢視警訊指標</a>
+                <a href="#" onclick="openModal('失智症的十大警訊', '掌握失智症的十大關鍵警訊', 'https://mattsue.my.canva.site/dagtpml86jg')" class="modal-link">檢視警訊</a>
             </div>
 
-            <div class="card" data-emoji="🛡️">
+            <div class="card">
+                <span class="card-icon">🛡️</span>
                 <h3>失智症之預防</h3>
                 <p>學習有效的失智症預防方法</p>
-                <a href="https://mattsue.my.canva.site/dagtpgtfpje" target="_blank">了解預防策略</a>
+                <a href="#" onclick="openModal('失智症之預防', '學習有效的失智症預防方法', 'https://mattsue.my.canva.site/dagtpgtfpje')" class="modal-link">了解預防</a>
             </div>
 
-            <div class="card" data-emoji="🏘️">
+            <div class="card">
+                <span class="card-icon">🏘️</span>
                 <h3>失智友善社區</h3>
                 <p>打造失智友善的社區環境</p>
-                <a href="https://mattsue.my.canva.site/dagtpr0vtfg" target="_blank">建構友善社區</a>
+                <a href="#" onclick="openModal('失智友善社區', '打造失智友善的社區環境', 'https://mattsue.my.canva.site/dagtpr0vtfg')" class="modal-link">建構社區</a>
             </div>
 
-            <div class="card" data-emoji="📚">
+            <div class="card">
+                <span class="card-icon">📚</span>
                 <h3>失智症相關資源</h3>
                 <p>取得更多失智症相關的實用資源</p>
-                <a href="https://mattsue.my.canva.site/dagtpt35ct4" target="_blank">獲取更多資源</a>
+                <a href="#" onclick="openModal('失智症相關資源', '取得更多失智症相關的實用資源', 'https://mattsue.my.canva.site/dagtpt35ct4')" class="modal-link">獲取資源</a>
             </div>
         </div>
 
         <div class="book-section">
-            <h2>推薦好書</h2>
-            <p style="color: #636e72; font-size: 1.2rem; margin-bottom: 20px; font-weight: 600;">
-                <strong>讓你健康不失智的體智能：活化大腦與身體的雙適能鍛鍊</strong>
-            </p>
+            <h2>推薦讀物</h2>
+            <p class="book-title">讓你健康不失智的體智能：活化大腦與身體的雙適能鍛鍊</p>
             <a href="https://www.books.com.tw/products/0011022363?sloc=main" target="_blank" class="book-link">
-                前往博客來購買
+                <span>📖</span>
+                前往購買
             </a>
         </div>
 
         <div class="footer">
-            <p><strong>簡報設計者：鍾孟修 職能治療師</strong></p>
+            <p>簡報設計者：鍾孟修 職能治療師</p>
             <p>邀請大家點讚追蹤加分享</p>
             <div class="social-links">
                 <a href="https://www.facebook.com/chungmenghsiu" target="_blank" class="social-link">
-                    Facebook粉絲專頁
+                    Facebook 粉絲專頁
                 </a>
                 <a href="https://mattsue.my.canva.site/dagtphwcn80" target="_blank" class="social-link">
                     製作者資訊
@@ -587,62 +593,100 @@
         </div>
     </div>
 
+    <!-- 模態視窗 -->
+    <div id="contentModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()">&times;</button>
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <p class="modal-subtitle" id="modalSubtitle"></p>
+            </div>
+            <div class="content-container" id="contentContainer">
+                <!-- 內容將在這裡動態載入 -->
+            </div>
+        </div>
+    </div>
+
     <script>
-        // 添加手繪動畫效果
+        // 模態視窗功能
+        function openModal(title, subtitle, url) {
+            const modal = document.getElementById('contentModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalSubtitle = document.getElementById('modalSubtitle');
+            const contentContainer = document.getElementById('contentContainer');
+            
+            // 設置標題和副標題
+            modalTitle.textContent = title;
+            modalSubtitle.textContent = subtitle;
+            
+            // 創建內容預覽和操作按鈕
+            contentContainer.innerHTML = `
+                <div class="content-preview">
+                    <h3>${title}</h3>
+                    <p>${subtitle}</p>
+                    <div class="action-buttons">
+                        <a href="${url}" target="_blank" class="primary-btn">
+                            <span>🔗</span>
+                            開啟完整內容
+                        </a>
+                        <button onclick="closeModal()" class="secondary-btn">
+                            <span>🏠</span>
+                            返回首頁
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="tips-section">
+                    <h4>閱讀指南</h4>
+                    <ul>
+                        <li>點擊「開啟完整內容」在新視窗中查看詳細資料</li>
+                        <li>建議使用電腦或平板獲得最佳閱讀體驗</li>
+                        <li>內容載入後可以調整縮放比例以適合閱讀</li>
+                        <li>閱讀完畢後可關閉新視窗回到此頁面</li>
+                    </ul>
+                </div>
+            `;
+            
+            // 顯示模態視窗
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('contentModal');
+            modal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+
+        // 點擊模態視窗外部關閉
+        window.onclick = function(event) {
+            const modal = document.getElementById('contentModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        // ESC鍵關閉模態視窗
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // 載入動畫
         document.addEventListener('DOMContentLoaded', function() {
             const cards = document.querySelectorAll('.card');
             cards.forEach((card, index) => {
                 card.style.opacity = '0';
-                card.style.transform = 'translateY(50px) rotate(10deg)';
-                card.style.transition = 'all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'all 0.6s ease';
                 
                 setTimeout(() => {
                     card.style.opacity = '1';
-                    card.style.transform = `translateY(0) rotate(${index % 2 === 0 ? '1deg' : '-1deg'})`;
-                }, index * 150);
-            });
-
-            // 添加隨機塗鴉元素
-            function createDoodle() {
-                const doodles = ['✨', '🌟', '💫', '⭐', '🎈', '🎉', '🎊', '🦋', '🌸', '🌺'];
-                const doodle = document.createElement('div');
-                doodle.className = 'doodle';
-                doodle.textContent = doodles[Math.floor(Math.random() * doodles.length)];
-                doodle.style.top = Math.random() * 100 + '%';
-                doodle.style.animationDuration = (Math.random() * 10 + 15) + 's';
-                document.body.appendChild(doodle);
-
-                setTimeout(() => {
-                    doodle.remove();
-                }, 25000);
-            }
-
-            // 每5秒創建一個新的塗鴉
-            setInterval(createDoodle, 5000);
-        });
-
-        // 添加搖擺效果
-        document.querySelectorAll('.card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.animation = 'wiggle 0.5s ease-in-out';
-            });
-            
-            card.addEventListener('animationend', function() {
-                this.style.animation = '';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
             });
         });
-
-        // 添加wiggle動畫
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes wiggle {
-                0%, 100% { transform: rotate(1deg); }
-                25% { transform: rotate(-2deg) scale(1.02); }
-                50% { transform: rotate(2deg) scale(1.01); }
-                75% { transform: rotate(-1deg) scale(1.02); }
-            }
-        `;
-        document.head.appendChild(style);
     </script>
 </body>
 </html>
